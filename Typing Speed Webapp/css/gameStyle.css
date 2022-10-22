@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: teal;
+
+}
+
+.wrapper {
+    width: 700px;
+    background: white;
+    padding: 35px;
+    border-radius: 9px;
+}
+
+.wrapper .input-field {
+    z-index: -999;
+    opacity: 0;
+    position: absolute;
+}
+
+.wrapper .content-box {
+    padding: 13px 20px 0;
+    border: 1px solid teal;
+    /*rgb(229, 229, 229)*/
+
+    border-radius: 9px;
+}
+
+.content-box .typing-text {
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+.typing-text::-webkit-scrollbar {
+    width: 0;
+}
+
+.typing-text p {
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+
+.typing-text p span {
+    position: relative;
+}
+
+.typing-text p span.correct {
+    color: rgb(13, 130, 246);
+    background-color: rgb(189, 255, 189);
+}
+
+.typing-text p span.incorrect {
+    color: #ff0008;
+    background: #ffc0cb;
+    outline: 1px solid #fff;
+    border-radius: 4px;
+}
+
+.typing-text p span.active {
+    border-bottom: dodgerblue;
+}
+
+.typing-text p span.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    background: dodgerblue;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+
+.content-box .content {
+    display: flex;
+    margin-top: 17px;
+    padding: 12px 0;
+    border-top: 1px solid teal;
+    justify-content: space-between;
+}
+
+.content .result-details {
+    display: flex;
+    width: calc(100% - 120px);
+    justify-content: space-between;
+    margin-top: 5px;
+
+}
+
+.result-details ul {
+    list-style: none;
+
+}
+
+.result-details li {
+    display: flex;
+}
+
+.result-details li p {
+    font-size: 19px;
+}
+
+.result-details li span {
+    display: block;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+
+.try {
+    color: teal;
+    background-color: white;
+    border: 2px teal solid;
+    border-radius: 4px;
+    padding: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.try:hover {
+    color: white;
+    background-color: teal;
+    /* border: 2px orangered solid; */
+    border-radius: 4px;
+    padding: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}

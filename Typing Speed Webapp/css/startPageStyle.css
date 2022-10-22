@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body {
+    background-color: teal;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+body .start_box {
+    margin-top: 1rem;
+}
+
+body h1 {
+    color: white;
+    font-weight: 600;
+}
+
+.startButton {
+    border: none;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.startButton {
+    text-decoration: none;
+    color: white;
+    background-color: teal;
+    padding: 0.7rem;
+    border: 2px white solid;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.startButton:hover {
+    text-decoration: none;
+    background-color: white;
+    color: teal;
+    padding: 0.7rem;
+    border: 2px white solid;
+    border-radius: 5px;
+    font-size: 15px;
+}
